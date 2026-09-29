@@ -10,27 +10,27 @@ Suppose $T(n)$ is the worst case running time of an algorithm with input size $n
 
 1. $T(n)$ is $\mathcal{O}(n^2)$.
 
-- Either; If T(n)=n2T(n)=n^2T(n)=n2, then it is O(n2)O(n^2)O(n2). But if T(n)=n3T(n)=n^3T(n)=n3, then it is not O(n2)O(n^2)O(n2). Therefore it could be either.
+- Either; If T(n) = n^2, then it is O(n^2). If T(n) = n^3, then it is not O(n^2). Therefore, it could be either true or false.
 
 2. $T(n)$ is $\Theta(n^3)$.
 
-- True; If T(n)=n3T(n)=n^3T(n)=n3, then it is Θ(n3)\Theta(n^3)Θ(n3). If T(n)=n2T(n)=n^2T(n)=n2, then it is not. The given information does not guarantee Θ(n3)\Theta(n^3)Θ(n3).
+- True; If T(n) = n^3, then it is Theta(n^3). If T(n) = n^2, then it is not Theta(n^3). The given information does not guarantee Theta(n^3).
 
 3. $T(n)$ is $\Omega(n)$.
 
-- False; Since T(n)T(n)T(n) is already Ω(n2)\Omega(n^2)Ω(n2), and n2n^2n2 grows at least as fast as nnn, it follows that T(n)T(n)T(n) must also be Ω(n)\Omega(n)Ω(n).
+- False; Since T(n) is Omega(n^2), it must also be Omega(n) because n^2 grows at least as fast as n.
 
 4. $T(n)$ is $\Theta(n^{1.5})$.
 
-- False; Θ(n1.5) grows slower than n2n^2n2. Since T(n)T(n)T(n) is guaranteed to be Ω(n2)\Omega(n^2)Ω(n2), it cannot be Θ(n1.5)\Theta(n^{1.5})Θ(n1.5).
+- False; Theta(n^1.5) grows slower than n^2. Since T(n) is Omega(n^2), it cannot be Theta(n^1.5).
 
 5. $T(n)$ is $\mathcal{O}(n)$.
 
-- True; A function that is Ω(n2)\Omega(n^2)Ω(n2) cannot also be O(n)O(n)O(n) because n2n^2n2 grows faster than nnn.
+- True; A function that is Omega(n^2) cannot also be O(n) because n^2 grows faster than n.
 
 6. $T(n)$ is $\Theta(n^2 \log n)$.
 
-- Either; n2logn satisfies both O(n3)O(n^3)O(n3) and Ω(n2)\Omega(n^2)Ω(n2), so T(n)T(n)T(n) could be Θ(n2log⁡n)\Theta(n^2 \log n)Θ(n2logn). However, T(n)T(n)T(n) could also be n2n^2n2 or n3n^3n3, so it is not guaranteed.
+- Either; n^2 log n satisfies both O(n^3) and Omega(n^2), so T(n) could be Theta(n^2 log n). However, T(n) could also be n^2 or n^3, so it is not guaranteed.
 
 ## Problem 2
 Consider the following algorithm where $f(A, i, j)$ is an unknown algorithm that takes as input an array $A$ and two indicies $i$ and $j$ and returns a number. \
